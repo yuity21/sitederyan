@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Petite sortie ?</title>
+    <link rel="stylesheet" type="text/css" href="demande.css">
+</head>
+<body>
+	<h1>Veux tu sortir prendre l'air avec moi madame ?</h1>
+	<img src="90rN.gif" alt="Chat suppliant">
+	<button id="oui" onclick="afficherMerci()">Oui</button>
+	<button id="non" onmouseover="deplacerBouton()">Non</button>
+    <script>
+        function deplacerBouton() {
+            document.getElementById("non").style.position = "absolute";
+            document.getElementById("non").style.top = Math.random() * 1000 + "px";
+            document.getElementById("non").style.left = Math.random() * 1000 + "px";
+        }
+        
+        function afficherMerci() {
+            document.getElementById("oui").style.display = "none";
+            document.getElementById("non").style.display = "none";
+            document.body.innerHTML += "<img src='dancing-cat-dancing-kitten.gif' alt='Chat dansant'>";
+            document.body.innerHTML += "<p>LET'S GO ON VA BIEN S'AMUSER TKT</p>";
+        }
+    </script>
+</body>
+</html>
